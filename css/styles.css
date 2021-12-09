@@ -137,15 +137,17 @@ ul {
 }
 
 /* -------------------Герой------------------- */
-.hero {
+.section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
-}
-.hero.section {
-  background: #2f303a;
-}
-.hero .container {
-  background: #2f303a;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   color: var(--primary-white-color);
@@ -173,6 +175,7 @@ ul {
   font-size: 16px;
   line-height: 1.88;
 }
+
 /* ------------------Section----------------- */
 .section {
   padding-top: 94px;
@@ -219,6 +222,9 @@ ul {
   border-radius: 4px;
   background-color: var(--background-body-color);
   margin-bottom: 30px;
+}
+.feature-icon .icon {
+  display: block;
 }
 .business-list {
   display: flex;
@@ -282,10 +288,30 @@ ul {
   color: var(--icon-white-color);
   background-color: var(--accent-color);
 }
+.section.command {
+  background-color: var(--background-body-color);
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-list .item {
+  padding: 16px 32px;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+  color: var(--icons-color);
+}
+.clients-list .icon {
+  display: block;
+  fill: currentColor;
+}
+.clients-list .item:hover,
+clients-list .item:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 .filter {
   display: flex;
-  /* margin-right: auto;
-  margin-left: auto; */
   justify-content: center;
 }
 .filter-list {
@@ -344,11 +370,18 @@ ul {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
+.filter-list .item:focus,
+.filter-list .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 /* footer */
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.container.bloks {
+  display: flex;
 }
 
 .address-link {
@@ -373,4 +406,37 @@ ul {
 }
 .footer .logo {
   color: var(--primary-white-color);
+}
+.join {
+  margin-left: 70px;
+  margin-top: 12px;
+  color: var(--primary-white-color);
+}
+.join .title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.join-list {
+  display: flex;
+  margin-top: 20px;
+}
+.join-icon-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  color: var(--icon-white-color);
+}
+.join-icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+.join-icon-item .icon {
+  fill: currentColor;
+}
+.join-icon-item:hover,
+.join-icon-item:focus {
+  background-color: var(--accent-color);
 }
