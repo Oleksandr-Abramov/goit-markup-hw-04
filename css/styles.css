@@ -344,21 +344,17 @@ ul {
 .filter .item:not(:last-child) {
   margin-right: 8px;
 }
-.filter-list .item:not(:nth-last-child(-n + 3)) {
+/* .filter-list .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
 .filter-list .item:not(:nth-child(3n + 3)) {
   margin-right: 30px;
-}
-.filter-list .content {
-  border: 1px solid#eeeeee;
-  border-top: 0px;
-  padding: 20px 24px;
-}
-
-/* .filter-list .text {
-  margin-top: 2px;
 } */
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+}
 .filter-button:hover,
 .filter-button:focus {
   color: var(--primary-white-color);
@@ -372,6 +368,11 @@ ul {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+.filter-list .content {
+  border: 1px solid#eeeeee;
+  border-top: 0px;
+  padding: 20px 24px;
 }
 .filter-list .text {
   margin-top: 2px;
